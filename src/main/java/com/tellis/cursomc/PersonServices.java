@@ -1,5 +1,7 @@
 package com.tellis.cursomc;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Logger;
 
@@ -14,10 +16,21 @@ public class PersonServices {
     
     private Logger logger = Logger.getLogger(PersonServices.class.getName());
 
+    public List<Person> findAll() {
+
+        List<Person> persons = new ArrayList<Person>();
+        for (int i = 0; i < 8; i++) {
+            Person person = mockPerson(i);
+            persons.add(person);
+        }
+        return persons;
+    }
+
+    
     public Person findById(String id) {
-
+        
         logger.info("Finding one person!");
-
+        
         Person person = new Person();
         person.setId(counter.incrementAndGet());
         person.setFirstName("Tellis");
@@ -25,7 +38,19 @@ public class PersonServices {
         person.setAddress("Rua Boa Vista, Santa Catarina - Brasil");
         person.setGender("Male");
         return person;
-
+        
+    }
+    
+    private Person mockPerson(int i) {
+    
+        Person person = new Person();
+        person.setId(counter.incrementAndGet());
+        person.setFirstName("firstName" + i);
+        person.setLastName("lastName" + i);
+        person.setAddress("address" + i);
+        person.setGender("Male");
+        return person;
+    
     }
 
 }
