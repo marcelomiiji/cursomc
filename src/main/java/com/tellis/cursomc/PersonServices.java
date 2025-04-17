@@ -18,6 +18,7 @@ public class PersonServices {
 
     public List<Person> findAll() {
 
+        logger.info("Finding all People!");
         List<Person> persons = new ArrayList<Person>();
         for (int i = 0; i < 8; i++) {
             Person person = mockPerson(i);
@@ -26,8 +27,8 @@ public class PersonServices {
         return persons;
     }
 
-    
     public Person findById(String id) {
+        
         
         logger.info("Finding one person!");
         
@@ -40,6 +41,15 @@ public class PersonServices {
         return person;
         
     }
+    
+    public Person create (Person person) {
+        
+        logger.info("Creating one person!");
+        return person;
+
+    }
+    
+    
     
     private Person mockPerson(int i) {
     
