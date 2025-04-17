@@ -1,4 +1,4 @@
-package com.tellis.cursomc;
+package com.tellis.cursomc.services;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tellis.cursomc.PersonServices;
 import com.tellis.cursomc.model.Person;
+import com.tellis.cursomc.services.PersonServices;
 
 @RestController
 @RequestMapping("/person")
