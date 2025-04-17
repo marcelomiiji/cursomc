@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: cursomc-tellis-com
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/cursomc-tellis-com?useTimezone=true&serverTimezone=UTC
+    username: admin
+    password: 349718
+    driver-class-name: com.mysql.cj.jdbc.Driver
+      
+  jpa:  
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate.dialect: org.hibernate.dialect.MySQLDialect
