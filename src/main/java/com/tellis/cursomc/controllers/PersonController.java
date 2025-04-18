@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tellis.cursomc.model.Person;
 import com.tellis.cursomc.services.PersonServices;
 
+import io.micrometer.core.instrument.step.StepLong;
+
 @RestController
 @RequestMapping("/person")
 public class PersonController {
@@ -28,7 +30,7 @@ public class PersonController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 
-    public Person findById(@PathVariable(value = "id") String id) {
+    public Person findById(@PathVariable(value = "id") Long id) {
         return service.findById(id);
 
     }
@@ -47,7 +49,7 @@ public class PersonController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 
-    public void delete(@PathVariable(value = "id") String id) {
+    public void delete(@PathVariable(value = "id") Long id) {
         service.delete(id);
 
     }    
