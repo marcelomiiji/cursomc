@@ -13,3 +13,10 @@ spring:
       ddl-auto: update
       properties:
         hibernate.dialect: org.hibernate.dialect.MySQLDialect
+        hibernate.format_sql: false
+        open-in-view: false
+logging:
+  level:
+    #root: WARN
+    com-tellis-com: DEBUG
+      
